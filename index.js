@@ -23,6 +23,11 @@ app.get('/saludo', function(req,res){
     res.send(`Hola ${req.query.nombre}, que tal?`)
 })
 
+app.get('/chau', function(req,res){
+    console.log(req.query) //Los pedidos get reciben los datos del req.query
+    res.send(`Chau ${req.query.nombre}`)
+})
+
 app.post('/nombreDelPedido', function(req,res) {
     console.log(req.body) //Los pedidos post reciben los datos del req.body
     res.send("ok")
